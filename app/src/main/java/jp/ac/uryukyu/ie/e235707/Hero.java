@@ -69,7 +69,7 @@ public class Hero {
      */
     public void attack(Enemy e){
         int damage = (int)(Math.random() * attack);
-        System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, e.getName(), damage);
+        System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", this.name, e.getName(), damage);
         e.wounded(damage);
     }
 

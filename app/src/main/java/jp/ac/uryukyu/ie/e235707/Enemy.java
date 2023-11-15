@@ -70,7 +70,7 @@ public class Enemy {
     public void attack(Hero hero){
         if(hitPoint > 0){
             int damage = (int)(Math.random() * attack);
-            System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, hero.getName(), damage);
+            System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", this.name, hero.getName(), damage);
             hero.wounded(damage);
         }
     }
