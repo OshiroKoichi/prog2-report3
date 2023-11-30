@@ -15,11 +15,8 @@ public class WarriorTest {
             int damage = enemyHitPoints - enemy.getHitPoint();
             // attackメソッドが期待通りのダメージを与えたかを手動で確認
             int expectedDamage = (int) (5 * 1.5);
-           if (damage == expectedDamage) {
-               System.out.println("テスト成功");
-           } else {
-               System.out.println("テスト失敗");
-           }
+            assert damage == expectedDamage : "テスト失敗";
+            System.out.println("テスト成功");
         }
     }
 }
