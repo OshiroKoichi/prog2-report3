@@ -28,6 +28,17 @@ public class Enemy extends LivingThing {
      * attackに応じて乱数でダメージを算出し、hero.wounded()によりダメージ処理を実行。
      * @param hero 攻撃対象
      */
+    @Override
+    public void attack(LivingThing hero) {
+        if (!isDead()) {
+            int damage = calculateDamage();
+            hero.wounded(damage);
+        }
+    }
+
+    private int calculateDamage(){
+        return getAttack();
+    }
 
     /**
      * 自身へ攻撃されたときのダメージ処理をするメソッド。
